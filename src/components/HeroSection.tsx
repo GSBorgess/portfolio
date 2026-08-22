@@ -46,14 +46,9 @@ export function HeroSection() {
       </aside>
 
       <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1500px] flex-col justify-center px-6 py-16 sm:px-10 lg:px-16">
-        <div className="mb-12 flex items-center gap-4 md:mb-0">
-          <span className="font-title text-xl font-bold uppercase text-text-secondary md:hidden">
-            Gabriel Borges
-          </span>
-        </div>
 
         <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_340px_minmax(0,1fr)] xl:grid-cols-[minmax(0,1fr)_400px_minmax(0,1fr)]">
-          <div className="relative z-20 order-2 text-center lg:order-1 lg:text-left">
+          <div className="relative z-20 order-2 pt-10 -bottom-6 text-center lg:order-1 lg:pt-0 lg:-bottom-0 lg:text-left">
             <p className="mb-2 font-title text-3xl font-bold uppercase leading-none text-text-main sm:text-4xl lg:text-4xl">
               Gabriel Borges
             </p>
@@ -62,18 +57,18 @@ export function HeroSection() {
             </h1>
           </div>
 
-          <div className="relative order-1 mx-auto w-full max-w-[340px] lg:order-2 xl:max-w-[400px]">
+          <div className="relative order-1 mx-auto w-full max-w-[300px] lg:max-w-[340px] lg:order-2 xl:max-w-[400px]">
             <div className="overflow-hidden rounded-2xl bg-bg-secondary">
               <img
                 src={hero}
                 alt="Retrato Gabriel Borges"
-                className="h-full w-full"
+                className="w-full h-full"
               />
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-bg-main to-bg-main/0" />
             </div>
 
-            <div className="absolute -bottom-10 left-2 flex h-28 w-28 -translate-x-1/2 items-center justify-center rounded-full bg-primary-color sm:h-28 sm:w-28">
-              <Hand className="h-10 w-10 text-text-main" aria-hidden="true" />
+            <div className="absolute -bottom-10 left-2 flex h-24 w-24 -translate-x-1/2 items-center justify-center rounded-full bg-primary-color sm:h-28 sm:w-28">
+              <Hand className="h-8 w-8  text-text-main" aria-hidden="true" lg:h-10 lg:w-10 />
             </div>
           </div>
 
