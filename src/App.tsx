@@ -1,3 +1,9 @@
+import { HeroSection } from "./components/HeroSection";
+
 export default function App() {
-  return <main />;
+  return (
+    <main>
+      <HeroSection />
+    </main>
+  );
 }

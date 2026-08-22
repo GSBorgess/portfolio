@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,8 +6,14 @@
 
 :root {
   color-scheme: dark;
-  --background: #090909;
-  --foreground: #f4f4f0;
+  --primary-color: #087CFA;
+  --secondary-color: #006FF5;
+  --bg-main: #0B0C0C;
+  --bg-secondary: #101111;
+  --text-main: #F5F5F5;
+  --text-secondary: #B5B5B5;
+  --border: #292B2D;
+  --chip: #161718;
 }
 
 * {
@@ -20,8 +26,8 @@ html,
 body,
 #root {
   min-height: 100%;
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-main);
+  color: var(--text-main);
 }
 
 body {
@@ -30,6 +36,15 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Antonio, ui-sans-serif, system-ui, sans-serif;
 }
 
 a {
@@ -45,6 +60,6 @@ select {
 }
 
 ::selection {
-  background: #e5e5e5;
-  color: #090909;
+  background: var(--primary-color);
+  color: var(--text-main);
 }

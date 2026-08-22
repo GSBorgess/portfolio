@@ -2,24 +2,24 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/lib/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        background: "#090909",
-        foreground: "#f4f4f0",
-        muted: "#a3a3a3",
-        subtle: "#737373",
-        line: "rgba(244, 244, 240, 0.12)",
-        surface: "#111111",
-        "surface-elevated": "#171717",
-        accent: "#e5e5e5",
+        "primary-color": "#087CFA",
+        "secondary-color": "#006FF5",
+        "bg-main": "#0B0C0C",
+        "bg-secondary": "#101111",
+        "text-main": "#F5F5F5",
+        "text-secondary": "#B5B5B5",
+        border: "#292B2D",
+        chip: "#161718",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        title: ["Antonio", "ui-sans-serif", "system-ui", "sans-serif"],
+        text: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
     },
   },
