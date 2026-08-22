@@ -1,51 +1,45 @@
-import { AtSign, Hand } from "lucide-react";
-import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Hand } from "lucide-react";
 import hero from "../assets/hero.webp";
 
-const socialLinks = [
-  {
-    label: "LinkedIn",
-    href: "#linkedin",
-    icon: FaLinkedinIn,
-  },
-  {
-    label: "GitHub",
-    href: "#github",
-    icon: FaGithub,
-  },
-  {
-    label: "WhatsApp",
-    href: "#whatsapp",
-    icon: FaWhatsapp,
-  },
+const tickerItems = [
+  "React",
+  "TypeScript",
+  "Node.js",
+  "PostgreSQL",
+  "Prisma",
+  "Tailwind",
 ];
 
 export function HeroSection() {
+  const { scrollY } = useScroll();
+  const tickerX = useTransform(scrollY, [0, 900], ["0px", "-520px"]);
+
   return (
-    <section className="relative min-h-screen overflow-hidden bg-bg-main text-text-main">
-      <aside
-        aria-label="Midias sociais"
-        className="absolute bottom-6 left-1/2 z-30 flex -translate-x-1/2 items-center gap-5 rounded-full border border-border bg-chip px-4 py-3 shadow-[0_0_48px_var(--bg-secondary)]"
+    <section className="relative overflow-hidden bg-bg-main pb-24 text-text-main">
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 z-30 overflow-hidden border-y border-border bg-[#070808] py-4 sm:py-5"
       >
-        <AtSign className="h-5 w-5 text-primary-color" aria-hidden="true" />
-        <div className="h-8 w-px bg-border" />
-        {socialLinks.map((item) => {
-          const Icon = item.icon;
-
-          return (
-            <a
-              key={item.label}
-              href={item.href}
-              aria-label={item.label}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-bg-main text-text-secondary transition hover:border-primary-color hover:bg-primary-color hover:text-text-main"
+        <motion.div
+          className="flex w-max items-center gap-9 whitespace-nowrap will-change-transform sm:gap-12"
+          style={{ x: tickerX }}
+        >
+          {[...tickerItems, ...tickerItems, ...tickerItems].map((item, index) => (
+            <div
+              key={`${item}-${index}`}
+              className="flex items-center gap-9 sm:gap-12"
             >
-              <Icon className="h-4 w-4" aria-hidden="true" />
-            </a>
-          );
-        })}
-      </aside>
+              <span className="font-title text-2xl font-bold uppercase leading-none text-text-main sm:text-3xl">
+                {item}
+              </span>
+              <span className="relative h-3 w-3 rotate-45 bg-primary-color" />
+            </div>
+          ))}
+        </motion.div>
+      </div>
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1500px] flex-col justify-center px-6 py-16 sm:px-10 lg:px-16">
+      <div className="relative z-10 mx-auto mt-20 mb-5 w-full max-w-[1500px] flex-col justify-center px-6 py-16 sm:px-10 lg:px-16 lg:mb-24">
 
         <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_340px_minmax(0,1fr)] xl:grid-cols-[minmax(0,1fr)_400px_minmax(0,1fr)]">
           <div className="relative z-20 order-2 pt-10 -bottom-6 text-center lg:order-1 lg:pt-0 lg:-bottom-0 lg:text-left">
