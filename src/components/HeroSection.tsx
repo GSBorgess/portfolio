@@ -16,7 +16,10 @@ export function HeroSection() {
   const tickerX = useTransform(scrollY, [0, 900], ["0px", "-520px"]);
 
   return (
-    <section className="relative overflow-hidden bg-bg-main pb-24 text-text-main">
+    <section
+      id="home"
+      className="relative overflow-hidden bg-bg-main pb-24 text-text-main"
+    >
       <div
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 z-30 overflow-hidden border-y border-border bg-[#070808] py-4 sm:py-5"
