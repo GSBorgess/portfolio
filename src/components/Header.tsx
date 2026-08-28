@@ -5,6 +5,7 @@ import hero from "../assets/hero.webp";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Sobre", href: "#sobre" },
+  { label: "Especialidades", href: "#especialidades" },
   { label: "Projetos", href: "#projetos" },
   { label: "Blogs", href: "#blogs" },
 ];
