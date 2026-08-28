@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Hand } from "lucide-react";
+import { FaHand } from "react-icons/fa6";
 import hero from "../assets/hero.webp";
 
 const tickerItems = [
@@ -66,7 +66,7 @@ export function HeroSection() {
             </div>
 
             <div className="absolute -bottom-10 left-2 flex h-24 w-24 -translate-x-1/2 items-center justify-center rounded-full bg-primary-color sm:h-28 sm:w-28">
-              <Hand
+              <FaHand
                 className="h-8 w-8 text-text-main lg:h-10 lg:w-10"
                 aria-hidden="true"
               />
