@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Hand } from "lucide-react";
+import { FaHand } from "react-icons/fa6";
 import hero from "../assets/hero.webp";
 
 const tickerItems = [
@@ -14,6 +14,10 @@ const tickerItems = [
 export function HeroSection() {
   const { scrollY } = useScroll();
   const tickerX = useTransform(scrollY, [0, 900], ["0px", "-520px"]);
+  const handWave = {
+    rotate: [0, 17, -9, 16, -6, 10, 0],
+    y: [0, -1, 0, -1, 0, -1, 0],
+  };
 
   return (
     <section className="relative overflow-hidden bg-bg-main pb-24 text-text-main">
@@ -62,7 +66,19 @@ export function HeroSection() {
             </div>
 
             <div className="absolute -bottom-10 left-2 flex h-24 w-24 -translate-x-1/2 items-center justify-center rounded-full bg-primary-color sm:h-28 sm:w-28">
-              <Hand className="h-8 w-8  text-text-main" aria-hidden="true" lg:h-10 lg:w-10 />
+              <motion.div
+                aria-hidden="true"
+                animate={handWave}
+                transition={{
+                  duration: 1.45,
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                  repeatDelay: 1.45,
+                }}
+                style={{ transformOrigin: "65% 85%" }}
+              >
+                <FaHand className="h-9 w-9 text-text-main sm:h-10 sm:w-10" />
+              </motion.div>
             </div>
           </div>
 
