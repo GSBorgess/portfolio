@@ -64,7 +64,7 @@ function ProjectCard({ project }: { project: Project }) {
       style={{ y, scale, opacity }}
       className="sticky top-24 overflow-hidden rounded-[2rem] border border-border bg-chip shadow-[0_28px_90px_rgba(0,0,0,0.38)]"
     >
-      <div className="relative flex min-h-[520px] items-center justify-center overflow-hidden px-6 py-20 text-center sm:min-h-[620px] sm:px-10 lg:min-h-[660px]">
+      <div className="relative flex min-h-[520px] items-center justify-center overflow-hidden px-6 pb-14 pt-20 text-center sm:min-h-[620px] sm:px-10 lg:min-h-[660px]">
         <motion.img
           src={project.image}
           alt=""
