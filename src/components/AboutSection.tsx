@@ -15,7 +15,7 @@ export function AboutSection() {
   return (
     <section
       id="sobre"
-      className="relative overflow-hidden bg-bg-main px-6 py-20 text-text-main sm:px-10 lg:px-16 lg:py-28"
+      className="relative overflow-hidden bg-bg-main px-6 pb-12 pt-20 text-text-main sm:px-10 lg:px-16 lg:py-28"
     >
       <div className="mx-auto grid w-full max-w-[1500px] items-center gap-12 lg:grid-cols-[minmax(280px,520px)_minmax(0,1fr)] lg:gap-20">
         <div className="order-2 mx-auto w-full max-w-[300px] lg:order-1 lg:mx-0 lg:max-w-[340px] xl:max-w-[400px]">
