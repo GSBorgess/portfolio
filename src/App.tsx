@@ -10,9 +10,9 @@ export default function App() {
     <>
       <Header />
       <HeroSection />
-      <AboutSection />
       <SpecialtiesSection />
       <ProjectsSection />
+      <AboutSection />
       <Footer />
     </>
   );
