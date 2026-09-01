@@ -15,7 +15,7 @@ export function AboutSection() {
   return (
     <section
       id="sobre"
-      className="relative overflow-hidden bg-bg-main px-6 py-20 text-text-main sm:px-10 lg:px-16 lg:py-28"
+      className="relative overflow-hidden bg-bg-main px-6 pb-20 text-text-main sm:px-10 lg:px-16 lg:pb-28"
     >
       <div className="mx-auto grid w-full max-w-[1500px] items-center gap-12 lg:grid-cols-[minmax(280px,520px)_minmax(0,1fr)] lg:gap-20">
         <div className="order-2 mx-auto w-full max-w-[300px] lg:order-1 lg:mx-0 lg:max-w-[340px] xl:max-w-[400px]">
@@ -28,7 +28,7 @@ export function AboutSection() {
           </div>
         </div>
 
-        <div className="order-1 text-center lg:order-2 lg:text-left">
+        <div className="order-1 lg:order-2 lg:text-left">
           <h2 className="font-title text-5xl font-bold uppercase leading-none tracking-normal text-text-main sm:text-6xl lg:text-7xl">
             Sobre mim
           </h2>
@@ -74,7 +74,7 @@ export function AboutSection() {
 
           <ul
             aria-label="Redes sociais"
-            className="mt-10 flex items-center justify-center gap-5 lg:justify-start"
+            className="mt-10 flex items-center gap-5 lg:justify-start"
           >
             {socialLinks.map(({ label, href, icon: Icon }) => (
               <li key={label}>
@@ -82,7 +82,7 @@ export function AboutSection() {
                   href={href}
                   target="_blank"
                   aria-label={label}
-                  className="flex h-11 w-11 items-center justify-center rounded-full text-primary-color transition hover:bg-primary-color hover:text-text-main focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-color duration-250"
+                  className="flex h-11 w-11 items-center rounded-full text-primary-color transition hover:bg-primary-color hover:text-text-main focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-color duration-250"
                 >
                   <Icon className="h-6 w-6" aria-hidden="true" />
                 </a>
