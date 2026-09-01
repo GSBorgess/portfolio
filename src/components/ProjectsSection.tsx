@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useRef } from "react";
-import projectImage from "../assets/hero.webp";
 import pizzaBackground from "../assets/pizza-background.webp";
 import techBackground from "../assets/tech-background.webp";
 import joiasBackground from "../assets/joias-background.webp";
@@ -123,15 +122,15 @@ export function ProjectsSection() {
       <div className="mx-auto w-full max-w-[1500px]">
         <motion.div
           style={{ y: headingY, opacity: headingOpacity }}
-          className="mb-14 lg:items-end"
+          className="mb-8 lg:items-end"
         >
           <div>
-            <h2 className="font-title text-5xl text-center font-bold uppercase leading-[0.86] text-text-main sm:text-6xl lg:text-7xl">
+            <h2 className="font-title text-5xl text-center font-bold uppercase text-text-main sm:text-6xl lg:text-7xl">
               Projetos em destaque
             </h2>
           </div>
           <div className="lg:pb-3">
-            <p className="text-base text-center leading-8 text-text-secondary sm:text-lg">
+            <p className="text-base text-center pt-5 leading-8 text-text-secondary sm:text-lg">
               Uma selecao de interfaces, sistemas e produtos digitais com foco
               em performance, responsividade e experiencia limpa.
             </p>
